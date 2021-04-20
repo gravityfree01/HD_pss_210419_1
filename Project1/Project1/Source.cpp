@@ -1,5 +1,30 @@
 #include"Header.h"
-int Sum(int a, int b);
+
+void Print9(int number);
+bool IsErrorNumber(int number);
+
+void main() {
+	while (true) {
+		printf("0-9°ªÀ» ÀÔ·ÂÇÏ¸é, ±¸±¸´Ü°ªÀ» ÀÔ·ÂÇÕ´Ï´Ù. \n");
+		int input;
+		fseek(stdin, 0, SEEK_END);
+		scanf_s("%d",&input);
+
+		if (input == 0) break;
+
+		if (IsErrorNumber(input)) {
+			printf("Error\n");
+
+		}
+		else {
+			Print9(input);
+		}
+	}
+	fgetc(stdin);
+}
+	
+	
+/*int Sum(int a, int b);
 int Sub(int a, int b);
 
 void main() {
@@ -35,9 +60,9 @@ void main() {
 	printf("»¬¼À °á°ú= %d", sub);
 	printf("°ö¼À °á°ú= %d", mul);
 	printf("³ª´°¼À °á°ú= %d", div);
+	*/
 
-	fgetc(stdin);
-}
+	
 
 
 
